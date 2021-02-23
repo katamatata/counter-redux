@@ -1,12 +1,18 @@
+import {
+  INCREMENT_COUNTER,
+  DECREMENT_COUNTER,
+  RESET_COUNTER,
+} from './actionTypes';
+
 const initialState = 0;
 
 const counterReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'INCREMENT':
+    case INCREMENT_COUNTER:
       return state + 1;
-    case 'DECREMENT':
+    case DECREMENT_COUNTER:
       return state - 1;
-    case 'ZERO':
+    case RESET_COUNTER:
       return 0;
     default:
       return state;
